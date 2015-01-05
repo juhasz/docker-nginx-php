@@ -3,9 +3,6 @@
 FROM phusion/baseimage:0.9.15
 MAINTAINER Márton Juhász <m@juhaszmarton.hu>
 
-# Disabling SSH. (Phusion Baseimage default)
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
-
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
